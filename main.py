@@ -111,7 +111,7 @@ async def on_message(message):
             await message.channel.send(embed=embed)
 
         elif message.content.find("!users") != -1:
-            await message.channel.send(f"""# Of Members {id.member_count}""")
+            await message.channel.send(f"""Number Of Members = {id.member_count}""")
 
         elif message.content.find("!map") != -1:
 
