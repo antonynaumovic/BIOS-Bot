@@ -170,4 +170,4 @@ async def on_message(message):
 
             await client.process_commands(message)
 
-client.run(read_token(), bot=True, reconnect=True)
+client.run(os.getenv('TOKEN'), bot=True, reconnect=True)
