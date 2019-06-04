@@ -1,6 +1,7 @@
 import discord
 import random
 import traceback
+import os
 from discord.ext import commands
 
 def read_token():
