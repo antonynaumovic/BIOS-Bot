@@ -63,14 +63,16 @@ async def on_raw_reaction_add(payload):
 
         print(payload.emoji.name)
 
-        for role in server.roles:
-            if role.name == 'Limited':
-                limited = discord.utils.get(member.guild.roles, name="Limited")
+        limited = discord.utils.get(member.guild.roles, name="Limited")
+        community = discord.utils.get(member.guild.roles, name="Community")
+        dj = discord.utils.get(member.guild.roles, name="DJ")
 
         if payload.emoji.name == '✅':
             print("yeet")
             try:
                 await member.remove_roles(limited)
+                await member.add_roles(community)
+                await member.add_roles(dj)
             except Exception:
                 print("Couldn't Remove role for {}".format(member))
                 traceback.print_exc()
