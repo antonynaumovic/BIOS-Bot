@@ -166,8 +166,8 @@ async def on_message(message):
                             inline=False)
             embed.add_field(name="10.", value="-ACCEPT RULES TO GAIN A ROLE BY CLICKING GREEN TICK", inline=False)
             embed.set_footer(text="Thank You.")
-            rulesPost = await rules.send(embed=embed)
-            await rulesPost.add_reaction("✅")
+            #rulesPost = await rules.send(embed=embed)
+            #await rulesPost.add_reaction("✅")
 
             await client.process_commands(message)
 
