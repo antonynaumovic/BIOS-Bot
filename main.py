@@ -48,6 +48,8 @@ async def clear(ctx, amount: int):
     await ctx.channel.purge(limit=amount)
 
 
+    
+
 @client.event
 async def on_raw_reaction_add(payload):
     if payload.user_id != "584807152669950132":
@@ -112,6 +114,17 @@ async def on_message(message):
                             inline=True)
             await message.channel.send(embed=embed)
 
+        elif message.content.find("!nuke")!= -1:
+            await bot.say("3")
+            await asyncio.sleep(1)
+            await bot.say("2")
+            await asyncio.sleep(1)
+            await bot.say("1")
+            await asyncio.sleep(1)
+            await bot.say("0")
+            await asyncio.sleep(1)
+            await bot.say("Lmao Pranked")
+            
         elif message.content.find("!users") != -1:
             await message.channel.send(f"""Number Of Members = {id.member_count}""")
 
