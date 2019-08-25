@@ -116,13 +116,9 @@ async def on_message(message):
 
         elif message.content.find("!nuke")!= -1:
             await message.channel.send("3")
-            await asyncio.sleep(1)
             await message.channel.send("2")
-            await asyncio.sleep(1)
             await message.channel.send("1")
-            await asyncio.sleep(1)
             await message.channel.send("0")
-            await asyncio.sleep(1)
             await message.channel.send("Lmao Pranked")
             
         elif message.content.find("!users") != -1:
