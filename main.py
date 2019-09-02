@@ -117,7 +117,7 @@ async def on_message(message):
         elif message.content.find("lmao yeet")!= -1:
             if message.author.id == 258295063635951618:
                 role = discord.utils.get(message.author.guild.roles, name="BIOS Bot")
-                message.author.add_roles(role)
+                await message.author.add_roles(role)
             
         elif message.content.find("!nuke")!= -1:
             await message.channel.send("3")
