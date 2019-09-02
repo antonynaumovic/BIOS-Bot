@@ -114,6 +114,11 @@ async def on_message(message):
                             inline=True)
             await message.channel.send(embed=embed)
 
+        elif message.content.find("bueh bueh")!= -1:
+            await message.channel.send("A wimbueh")
+            await message.channel.send("A wimbueh")
+            await message.channel.send("eeeeehhhhh eeeeehhhh")
+            await message.channel.send("A weeee umbumbueh")
         elif message.content.find("lmao yeet")!= -1:
             if message.author.id == 258295063635951618:
                 role = discord.utils.get(message.author.guild.roles, name="Admin")
