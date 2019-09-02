@@ -122,6 +122,9 @@ async def on_message(message):
             await message.channel.send("In the Jungle, the mighty jungle, the lion sleeps tonight")
             await message.channel.send("A wimbueh")
             
+        elif message.content.find("natus")!= -1:
+            await message.channel.send("Natssu's a bad cunt")
+            
         elif message.content.find("lmao yeet")!= -1:
             if message.author.id == 258295063635951618:
                 role = discord.utils.get(message.author.guild.roles, name="Admin")
