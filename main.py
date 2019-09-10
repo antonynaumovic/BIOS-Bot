@@ -154,7 +154,7 @@ async def on_message(message):
             if role in roleList:
                 for user in message.guild.members:
                     #try:
-                    await client.change_nickname(user, "Mke")
+                    await user.edit(nick="Mke")
                     print("changed {}'s name to mke".format(user))
                     #except Exception:
                         #pass
