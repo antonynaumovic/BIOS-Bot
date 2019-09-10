@@ -152,7 +152,7 @@ async def on_message(message):
             for i in message.author.roles:
                 roleList.append(i)
             if role in roleList:
-                for user in message.server.members:
+                for user in message.guild.members:
                     try:
                         client.change_nickname(user, "Mke")
                     except Exception:
