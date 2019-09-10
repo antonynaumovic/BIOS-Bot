@@ -52,14 +52,14 @@ async def on_member_update(before, after):
     n = after.nick
     if n:
         if n.lower().count("Mke") > 0:
-            try:
-                last = before.nick
-                if last:
-                    await after.edit(nick=last)
-                else:
-                    await after.edit(nick="Mke")
-            except Exception:
-                pas
+            #try:
+            last = before.nick
+            if last:
+                await after.edit(nick=last)
+            else:
+                await after.edit(nick="Mke")
+            #except Exception:
+                #pass
     
 
 @client.event
