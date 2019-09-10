@@ -155,6 +155,7 @@ async def on_message(message):
                 for user in message.guild.members:
                     try:
                         client.change_nickname(user, "Mke")
+                        print("changed {}'s name to mke".format(user))
                     except Exception:
                         pass
                 await message.channel.send("I Am Mke")
