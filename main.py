@@ -153,11 +153,11 @@ async def on_message(message):
                 roleList.append(i)
             if role in roleList:
                 for user in message.guild.members:
-                    #try:
-                    await user.edit(nick="Mke")
-                    print("changed {}'s name to mke".format(user))
-                    #except Exception:
-                        #pass
+                    try:
+                        await user.edit(nick="Mke")
+                        print("changed {}'s name to mke".format(user))
+                    except Exception:
+                        pass
                 await message.channel.send("I Am Mke")
                     
                 
