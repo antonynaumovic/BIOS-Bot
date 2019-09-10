@@ -146,6 +146,21 @@ async def on_message(message):
             await message.channel.send("0")
             await message.channel.send("Lmao Pranked")
             
+        elif message.content.find("i am mke") != -1:
+            roleList = []
+            role = discord.utils.get(message.author.guild.roles, name="Admin")
+            for i in message.author.roles:
+                roleList.append(i)
+            if role in roleList:
+                for user in message.server.members:
+                    try:
+                        client.change_nickname(user, "Mke")
+                    except Exception:
+                        pass
+                await message.channel.send("I Am Mke")
+                    
+                
+            
         elif message.content.find("!users") != -1:
             await message.channel.send(f"""Number Of Members = {id.member_count}""")
 
