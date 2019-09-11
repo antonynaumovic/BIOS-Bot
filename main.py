@@ -50,7 +50,7 @@ async def clear(ctx, amount: int):
 @client.event
 async def on_member_update(before, after):
     n = after.nick
-    if after.nick != "Mke":
+    if after.nick != "Mke" and after.user.id != 145926021051449355:
         try:
             await after.edit(nick="Mke")
         except Exception:
