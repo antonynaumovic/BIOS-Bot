@@ -49,6 +49,7 @@ async def clear(ctx, amount: int):
 
 @client.event
 async def on_member_update(before, after):
+    pass
     n = after.nick
     if after.nick != "Mke" and after.id != 145926021051449355:
         try:
