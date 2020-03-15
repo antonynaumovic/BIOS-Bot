@@ -89,10 +89,10 @@ async def on_raw_reaction_add(payload):
                 pass
 
 
-@client.event
-async def on_member_join(member):
-    limited = discord.utils.get(member.guild.roles, name="Limited")
-    await member.add_roles(limited)
+#@client.event
+#async def on_member_join(member):
+#    limited = discord.utils.get(member.guild.roles, name="Limited")
+#    await member.add_roles(limited)
 
 
 @client.event
